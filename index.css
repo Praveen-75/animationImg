@@ -1,0 +1,267 @@
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+body,
+html {
+     height: 100%;
+     width: 100%;
+}
+
+.main {
+     overflow: hidden;
+     position: relative;
+     height: 100vh;
+     width: 100%;
+     background-color: rgb(16, 14, 14);
+}
+
+.nav {
+     display: flex;
+     height: 5vw;
+     width: 100%;
+     background-color: black;
+     color: white;
+}
+
+.left {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     height: 5vw;
+     width: 20vw;
+     font-size: .8vw;
+}
+
+.mid {
+     z-index: 99999;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     height: 5vw;
+     width: 50vw;
+     font-size: .8vw;
+     padding: 0 3vw;
+}
+
+#color {
+     background: -webkit-linear-gradient(blue, pink);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+}
+
+.right {
+     z-index: 9999;
+     height: 5vw;
+     width: 30vw;
+     display: flex;
+     align-items: center;
+}
+
+.right button {
+     padding: 1vw 3vw;
+     margin-left: 13vw;
+     background-image: linear-gradient(red, yellow);
+}
+
+.text {
+     padding-left: 2vw;
+     height: 40vw;
+     width: 60vw;
+     /* background-color: aqua; */
+     color: white;
+}
+
+.text h1 {
+     padding-top: 2vw;
+     font-size: 5vw;
+     text-transform: uppercase;
+     font-family: "bigilla";
+}
+
+.text p {
+     padding-top: 2vw;
+     font-size: 1vw;
+     width: 50vw;
+}
+
+.text button {
+     margin-top: 1vw;
+     padding: 1vw 3vw;
+     background-image: linear-gradient(red, yellow);
+}
+
+.img {
+     display: flex;
+     gap: 2vw;
+     position: absolute;
+     right: 0;
+     top: 5vw;
+     height: 45vw;
+     width: 40vw;
+     /* background-color: aqua; */
+}
+
+.first {
+     display: flex;
+     flex-direction: column;
+     gap: 1vw;
+     align-items: center;
+     height: 100%;
+     width: 12vw;
+     /* background-color: blue; */
+}
+
+.second {
+     display: flex;
+     flex-direction: column;
+     gap: 1vw;
+     align-items: center;
+     height: 100%;
+     width: 12vw;
+     /* background-color: rgb(38, 38, 49); */
+}
+
+.third {
+     display: flex;
+     flex-direction: column;
+     gap: 1vw;
+     align-items: center;
+     height: 100%;
+     width: 12vw;
+     /* background-color: rgb(109, 109, 197); */
+}
+
+.photo {
+     height: 10vw;
+     width: 10vw;
+     border-radius: 1vw;
+     /* background-color: aliceblue; */
+     animation-name: scroll;
+     animation-duration: 1.5s;
+     animation-direction: reverse;
+     animation-iteration-count: infinite;
+     animation-timing-function: linear;
+     border: solid .1vw rgb(62, 58, 58);
+}
+
+.photo1 {
+     height: 10vw;
+     border-radius: 1vw;
+     width: 10vw;
+     /* background-color: aliceblue; */
+     border: solid .1vw rgb(62, 58, 58);
+     animation-name: scroll;
+     animation-duration: 1.5s;
+     /* animation-direction: reverse; */
+     animation-iteration-count: infinite;
+     animation-timing-function: linear;
+}
+
+.photo img,
+.photo1 img {
+     height: 100%;
+     width: 100%;
+}
+
+@keyframes scroll {
+     0% {
+          transform: translateY(0);
+     }
+
+     100% {
+          transform: translateY(calc((-100% -32px)));
+     }
+}
+
+@media (max-width: 550px) {
+     .main {
+          height: 100%;
+          width: 100%;
+          /* background-color: red; */
+     }
+
+     .nav {
+          height: 15vw;
+          width: 100%;
+          background-color: black;
+     }
+
+     .left {
+          display: flex;
+          align-items: center;
+          height: 15vw;
+          width: 20vw;
+          font-size: .9vw;
+          font-weight: 100;
+          padding: 0 2vw;
+     }
+
+     .mid {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          height: 15vw;
+          width: 50vw;
+          font-size: .9vw;
+          font-weight: 100;
+     }
+
+     .right {
+          position: absolute;
+          height: 15vw;
+          width: 45vw;
+          right: -1vw;
+          font-size: 1vw;
+          border: none;
+     }
+
+     .text {
+          height: 100vw;
+          width: 100vw;
+          /* background-color: aqua; */
+     }
+
+     #btn {
+          height: 10vw;
+          position: absolute;
+          z-index: 9999;
+          width: 98%;
+          border: none;
+          padding: 0 5vw;
+     }
+
+     .text h1 {
+          font-size: 9vw;
+     }
+
+     .text p {
+          font-size: 5vw;
+          width: 95vw;
+     }
+
+     .img {
+          height: 100vw;
+          width: 100%;
+          /* background-color: blue; */
+          position: absolute;
+          top: 100vw;
+          display: flex;
+          justify-content: space-between;
+          padding: 5vw 10vw;
+     }
+
+     .photo {
+          overflow-x: hidden;
+          height: 20vw;
+          width: 20vw;
+     }
+
+     .photo1 {
+          overflow-x: hidden;
+          height: 30vw;
+          width: 20vw;
+     }
+}
